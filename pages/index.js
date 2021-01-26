@@ -17,6 +17,8 @@ const Main = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
+  padding: 0 3rem;
 
   .bg-video {
     position: absolute;
@@ -31,6 +33,7 @@ const Main = styled.section`
 
   h1 {
     color: white;
+    font-size: 9rem;
   }
 
   p {
@@ -67,7 +70,7 @@ export default function Home() {
         <h1>Hi i'm Andres Carrasco</h1>
         <p>
           I'm a Lima - Perú based front-end developer specialized in ReactJs,
-          always trying to improve and do better thigs.
+          always trying to improve and do better things.
         </p>
         <div className="socials">
           <a href="https://www.facebook.com/andresecr/">
