@@ -70,8 +70,26 @@ html {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
+.header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: black;
+  padding: 1rem;
+}
 `;
 
 export default GlobalStyle;
