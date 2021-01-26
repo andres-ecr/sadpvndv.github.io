@@ -28,13 +28,10 @@ function Footer() {
     <StyledFooter>
       <Social />
       <span>
-        Made with ♥️ by
         <a href="https://www.linkedin.com/in/andresecr/" target="_blank">
-          {' '}
-          Andres Carrasco
+          Andres Carrasco &copy; 2021
         </a>
       </span>
-      <span>&copy; All credit goes to Andres Carrasco - Copyright 2021</span>
     </StyledFooter>
   );
 }
