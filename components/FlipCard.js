@@ -92,7 +92,7 @@ function FlipCard({ img, title, link }) {
               doloribus numquam adipisci vel ipsam odit aut beatae corrupti, cum
               ut quas reiciendis!
             </p>
-            <a href={link} target="_blank">
+            <a href={link} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkAlt size={25} />
             </a>
           </div>

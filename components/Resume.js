@@ -54,7 +54,7 @@ function Resume({ forwardedRef }) {
         </div>
         <div className="resume-items">
           <div>
-            <h5>Rafael Belloso Chacin University</h5>
+            <h5>Dr. Rafael Belloso Chacin University</h5>
             <span>Bachelor of Engineering</span>
             <span>Aug. 2014 - Jul. 2018</span>
           </div>

@@ -25,13 +25,17 @@ const StyledWork = styled.section`
     width: 80vw;
 
     @media (min-width: 1440px) {
-      width: 70vw;
+      .card-wrapper {
+        width: 70vw;
+      }
     }
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   }
 
