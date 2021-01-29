@@ -13,7 +13,7 @@ const StyledWork = styled.section`
 
   h3 {
     font-size: ${({ theme }) => theme.typography.medium};
-    color: ${({ theme }) => theme.colors.darkGray};
+    color: ${({ theme }) => theme.colors.tertiary};
     padding-bottom: 5rem;
   }
 

@@ -10,6 +10,11 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Head>
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <meta name="description" content="lorem ipsum"></meta>
+          <title>Portfolio | Andres Carrasco</title>
+        </Head>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>

@@ -1,5 +1,4 @@
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
@@ -46,16 +45,16 @@ const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 2rem 2rem 2rem;
-  }
 
-  .flip-box-back h2 {
-    margin-top: 50px;
-    color: ${({ theme }) => theme.colors.white};
-  }
+    p {
+      color: ${({ theme }) => theme.colors.white};
+      margin-top: 1.5rem;
+    }
 
-  p {
-    color: ${({ theme }) => theme.colors.white};
-    margin-top: 1.5rem;
+    h2 {
+      margin-top: 50px;
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
 
   a {
@@ -63,11 +62,11 @@ const StyledCard = styled.div`
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.tertiary};
+    fill: ${({ theme }) => theme.colors.primary};
     transition: all 0.3s;
 
     &:hover {
-      fill: ${({ theme }) => theme.colors.primary};
+      fill: ${({ theme }) => theme.colors.tertiary};
     }
   }
 
@@ -77,15 +76,15 @@ const StyledCard = styled.div`
   }
 `;
 
-function FlipCard({ img, title, link, icon }) {
+function FlipCard({ img, title, link }) {
   return (
     <StyledCard>
-      <div class="flip-box">
-        <div class="flip-box-inner">
-          <div class="flip-box-front">
+      <div className="flip-box">
+        <div className="flip-box-inner">
+          <div className="flip-box-front">
             <img src={img} alt={title} />
           </div>
-          <div class="flip-box-back">
+          <div className="flip-box-back">
             <h2>{title}</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis

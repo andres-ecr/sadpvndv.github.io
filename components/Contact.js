@@ -1,10 +1,10 @@
 //Base imports
 import React from 'react';
-import { FaInbox } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const FormContainer = styled.section`
   width: 100%;
+  height: 85vh;
   padding: 10rem 6rem;
   background: ${({ theme }) => theme.colors.black};
   background-size: cover;
@@ -27,12 +27,19 @@ export const StyledForm = styled.form`
     width: 100%;
   }
 
+  h3 {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${({ theme }) => theme.typography.medium};
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
   input[type='submit'] {
     background: ${({ theme }) => theme.colors.darkGray};
     border: none;
     padding: 1rem;
     border-radius: 0.2rem;
-    transition: all ease-out 0.5s;
+    transition: all ease-out 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,8 +135,9 @@ export const StyledForm = styled.form`
 
 function Form() {
   return (
-    <FormContainer>
+    <FormContainer id="section5">
       <StyledForm>
+        <h3>Have a question or want to work together?</h3>
         <label htmlFor="fname">name</label>
         <input type="text" id="fname" name="fname" required />
         <label htmlFor="email">email</label>
@@ -137,13 +145,7 @@ function Form() {
         <label htmlFor="phone">phone</label>
         <input type="tel" id="phone" name="phone" required />
         <label htmlFor="message">message</label>
-        <textarea
-          name="message"
-          id="message"
-          rows="10"
-          cols="30"
-          placeholder="tumensaje"
-        />
+        <textarea name="message" id="message" rows="10" cols="30" />
         <div className="form-send">
           <input type="submit" name="submit" />
         </div>

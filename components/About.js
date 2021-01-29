@@ -18,7 +18,7 @@ const StyledAbout = styled.section`
     color: white;
     width: 40rem;
     font-size: ${({ theme }) => theme.typography.small};
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   a {
@@ -34,6 +34,7 @@ const StyledAbout = styled.section`
     width: 18rem;
     font-size: 1.2rem;
     color: white;
+    margin-top: 2rem;
 
     svg {
       fill: white;
@@ -57,10 +58,14 @@ function About({ forwardedRef }) {
       <div>
         <h3>About me</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          dolorem eos consequatur hic! Perferendis, optio omnis quia excepturi
-          quasi, iure amet quaerat eos quam consequuntur repellendus quibusdam
-          sit assumenda quisquam.
+          I'm a Developer. I graduated from Rafael Belloso Chacin's University
+          in 2018 for Informatics Engineer Degree.{' '}
+        </p>
+        <p>
+          I consider myself as a 'forever student', fueled by passion for
+          development, continued my career growing as a self-taught, mainly
+          focused on the front end development, growing and improving, staying
+          in tune with the latest technologies.
         </p>
         <a href="https://github.com/sadpvndv/resume/raw/main/Andres-ESP.pdf">
           <FaFileDownload />
