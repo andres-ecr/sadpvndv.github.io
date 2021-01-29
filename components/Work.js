@@ -24,8 +24,14 @@ const StyledWork = styled.section`
     flex-wrap: wrap;
     width: 80vw;
 
-    @media (max-width: 1920px) {
+    @media (min-width: 1440px) {
       width: 70vw;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 

@@ -56,17 +56,6 @@ html {
   }
 }
 
-@media (max-width: 450px) {
-  html {
-    font-size: 34%;
-  }
-}
-
-@media (max-width: 320px) {
-  html {
-    font-size: 32%;
-  }
-}
 
 a {
   text-decoration: none;
