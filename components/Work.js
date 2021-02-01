@@ -1,5 +1,5 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
+import { withTranslation } from '../i18n';
 import FlipCard from '../components/FlipCard';
 
 const StyledWork = styled.section`
@@ -94,44 +94,36 @@ const StyledWork = styled.section`
   }
 `;
 
-function Work({ forwardedRef }) {
+function Work({ forwardedRef, t }) {
   return (
     <StyledWork id="section4" ref={forwardedRef}>
-      <h3>Check out some of my works</h3>
+      <h3>{t('worksTitle')}</h3>
       <div className="card-wrapper">
         <FlipCard
           title="Alchlab"
           img="assets/img/alchlab-project.png"
           link="https://alchlab.com"
+          description={t('alchlabDesc')}
         />
         <FlipCard
           title="Cleverwolf Technologies"
           img="assets/img/cwt-project.png"
           link="https://cwtweb-eyac6kc85.vercel.app/"
+          description={t('cwtDesc')}
         />
         <FlipCard
           title="White Security"
           img="assets/img/whitesec-project.png"
           link="https://whitesec.com.mx"
-        />
-        <FlipCard
-          title="Alchlab"
-          img="assets/img/alchlab-project.png"
-          link="https://alchlab.com"
-        />
-        <FlipCard
-          title="Cleverwolf Technologies"
-          img="assets/img/cwt-project.png"
-          link="https://cwtweb-eyac6kc85.vercel.app/"
-        />
-        <FlipCard
-          title="White Security"
-          img="assets/img/whitesec-project.png"
-          link="https://whitesec.com.mx"
+          description={t('wsDesc')}
         />
       </div>
     </StyledWork>
   );
 }
 
-export default Work;
+Work.getInitialProps = async () => ({
+  namespacesRequired: ['work'],
+});
+
+export default withTranslation('work')(Work);

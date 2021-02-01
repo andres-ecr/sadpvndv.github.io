@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import Head from 'next/head';
+import { withTranslation } from '../i18n';
 import styled from 'styled-components';
 import HeaderItems from '../components/UI/HeaderItems';
 import Sections from '../components/Sections';
@@ -6,7 +8,7 @@ import Footer from '../components/UI/Footer';
 
 const StyledHeader = styled.header`
   .active {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   a {
@@ -14,10 +16,15 @@ const StyledHeader = styled.header`
     font-size: 2.5rem;
     cursor: pointer;
     padding: 0 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
 
-export default function Home() {
+function Home({ t }) {
   const [isSticky, setSticky] = useState(false);
   const childRef = useRef(null);
   const handleScroll = () => {
@@ -36,6 +43,11 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="description" content="lorem ipsum"></meta>
+        <title>{t('metaTitle')}</title>
+      </Head>
       <StyledHeader className={isSticky ? 'sticky-header' : 'header'}>
         <HeaderItems />
       </StyledHeader>
@@ -44,3 +56,9 @@ export default function Home() {
     </>
   );
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(Home);

@@ -1,0 +1,14 @@
+{
+  "metaTitle": "Portafolio | Andres Carrasco",
+  "aboutTitle": "Sobre mi",
+  "aboutp1": "Soy un Desarrollador web, me gradué de la Universidad Rafael Belloso Chacín en 2018 como Ingeniero en Informática.",
+  "aboutp2": "Me considero un 'alumno eterno', impulsado por la pasión por el desarrollo, continué mi carrera creciendo como autodidacta, enfocado principalmente en el desarrollo front end, crecer y mejorar, manteniéndome en sintonía con las últimas tecnologías.",
+  "resumeButton": "Descargar CV",
+  "resumeLink": "https://github.com/sadpvndv/resume/raw/main/Andres-ESP.pdf",
+  "formTitle": "¿Tienes alguna pregunta o deseas concretar un proyecto?",
+  "formName": "nombre",
+  "formEmail": "email",
+  "formPhone": "teléfono",
+  "formMessage": "mensaje",
+  "formSubmit": "Enviar"
+}

@@ -1,5 +1,5 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
+import { withTranslation } from '../i18n';
 
 const StyledResume = styled.section`
   background: ${({ theme }) => theme.colors.white};
@@ -45,35 +45,35 @@ const StyledResume = styled.section`
   }
 `;
 
-function Resume({ forwardedRef }) {
+function Resume({ forwardedRef, t }) {
   return (
     <StyledResume id="section3" ref={forwardedRef}>
       <div className="resume-container">
         <div className="resume-title">
-          <h4>Education</h4>
+          <h4>{t('educationTitle')}</h4>
         </div>
         <div className="resume-items">
           <div>
-            <h5>Dr. Rafael Belloso Chacin University</h5>
-            <span>Bachelor of Engineering</span>
-            <span>Aug. 2014 - Jul. 2018</span>
+            <h5>{t('university')}</h5>
+            <span>{t('grade')}</span>
+            <span>{t('date')}</span>
           </div>
         </div>
       </div>
       <div className="resume-container">
         <div className="resume-title">
-          <h4>Work</h4>
+          <h4>{t('workTitle')}</h4>
         </div>
         <div className="resume-items">
           <div>
-            <h5>Smartphones Peru</h5>
-            <span>Front-end developer</span>
-            <span>Mar. 2019 - Sept. 2019</span>
+            <h5>{t('workCompany1')}</h5>
+            <span>{t('workPosition1')}</span>
+            <span>{t('workDate1')}</span>
           </div>
           <div>
-            <h5>Freelancer</h5>
-            <span>Front-end developer</span>
-            <span>Sept. 2018 - Present</span>
+            <h5>{t('workCompany2')}</h5>
+            <span>{t('workPosition2')}</span>
+            <span>{t('workDate2')}</span>
           </div>
         </div>
       </div>
@@ -81,4 +81,8 @@ function Resume({ forwardedRef }) {
   );
 }
 
-export default Resume;
+Resume.getInitialProps = async () => ({
+  namespacesRequired: ['resume'],
+});
+
+export default withTranslation('resume')(Resume);

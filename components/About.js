@@ -1,5 +1,7 @@
-import { FaFileDownload } from 'react-icons/fa';
 import styled from 'styled-components';
+import { withTranslation } from '../i18n';
+
+import { FaFileDownload } from 'react-icons/fa';
 
 const StyledAbout = styled.section`
   background: ${({ theme }) => theme.colors.black};
@@ -52,28 +54,24 @@ const StyledAbout = styled.section`
   }
 `;
 
-function About({ forwardedRef }) {
+function About({ forwardedRef, t }) {
   return (
     <StyledAbout id="section2" ref={forwardedRef}>
       <div>
-        <h3>About me</h3>
-        <p>
-          I'm a Developer. I graduated from Rafael Belloso Chacin's University
-          in 2018 for Informatics Engineer Degree.{' '}
-        </p>
-        <p>
-          I consider myself as a 'forever student', fueled by passion for
-          development, continued my career growing as a self-taught, mainly
-          focused on the front end development, growing and improving, staying
-          in tune with the latest technologies.
-        </p>
-        <a href="https://github.com/sadpvndv/resume/raw/main/Andres-ESP.pdf">
+        <h3>{t('aboutTitle')}</h3>
+        <p>{t('aboutp1')}</p>
+        <p>{t('aboutp2')}</p>
+        <a href={t('resumeLink')}>
           <FaFileDownload />
-          Download resume
+          {t('resumeButton')}
         </a>
       </div>
     </StyledAbout>
   );
 }
 
-export default About;
+About.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(About);

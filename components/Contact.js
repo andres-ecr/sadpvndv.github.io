@@ -1,5 +1,4 @@
-//Base imports
-import React from 'react';
+import { withTranslation } from '../i18n';
 import styled from 'styled-components';
 
 export const FormContainer = styled.section`
@@ -87,6 +86,10 @@ export const StyledForm = styled.form`
     }
   }
 
+  input[type='submit'] {
+    border: 1px solid transparent;
+  }
+
   input:focus,
   textarea:focus {
     outline: none;
@@ -133,25 +136,29 @@ export const StyledForm = styled.form`
   }
 `;
 
-function Form() {
+function Form({ t }) {
   return (
     <FormContainer id="section5">
       <StyledForm>
-        <h3>Have a question or want to work together?</h3>
-        <label htmlFor="fname">name</label>
+        <h3>{t('formTitle')}</h3>
+        <label htmlFor="fname">{t('formName')}</label>
         <input type="text" id="fname" name="fname" required />
-        <label htmlFor="email">email</label>
+        <label htmlFor="email">{t('formEmail')}</label>
         <input type="email" id="email" name="email" required />
-        <label htmlFor="phone">phone</label>
+        <label htmlFor="phone">{t('formPhone')}</label>
         <input type="tel" id="phone" name="phone" required />
-        <label htmlFor="message">message</label>
+        <label htmlFor="message">{t('formMessage')}</label>
         <textarea name="message" id="message" rows="10" cols="30" />
         <div className="form-send">
-          <input type="submit" name="submit" />
+          <input type="submit" value={t('formSubmit')} />
         </div>
       </StyledForm>
     </FormContainer>
   );
 }
 
-export default Form;
+Form.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(Form);

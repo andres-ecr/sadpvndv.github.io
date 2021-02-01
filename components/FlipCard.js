@@ -76,7 +76,7 @@ const StyledCard = styled.div`
   }
 `;
 
-function FlipCard({ img, title, link }) {
+function FlipCard({ img, title, link, description }) {
   return (
     <StyledCard>
       <div className="flip-box">
@@ -86,12 +86,7 @@ function FlipCard({ img, title, link }) {
           </div>
           <div className="flip-box-back">
             <h2>{title}</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-              laudantium, voluptas aspernatur quia veniam at deleniti sed
-              doloribus numquam adipisci vel ipsam odit aut beatae corrupti, cum
-              ut quas reiciendis!
-            </p>
+            <p>{description}</p>
             <a href={link} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkAlt size={25} />
             </a>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { withTranslation } from '../i18n';
 import Social from './Social';
 
 const StyledMain = styled.section`
@@ -35,7 +36,7 @@ const StyledMain = styled.section`
   }
 `;
 
-function Main() {
+function Main({ t }) {
   return (
     <>
       <div id="section1">
@@ -46,11 +47,8 @@ function Main() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <h1>Hi i'm Andres Carrasco</h1>
-          <p>
-            I'm a Lima - Perú based front-end developer specialized in ReactJs,
-            always trying to improve and do better things.
-          </p>
+          <h1>{t('title')}</h1>
+          <p>{t('description')}</p>
           <Social />
         </StyledMain>
       </div>
@@ -58,4 +56,8 @@ function Main() {
   );
 }
 
-export default Main;
+Main.getInitialProps = async () => ({
+  namespacesRequired: ['main'],
+});
+
+export default withTranslation('main')(Main);
