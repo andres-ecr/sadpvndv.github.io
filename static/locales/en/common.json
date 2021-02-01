@@ -1,0 +1,14 @@
+{
+  "metaTitle": "Portfolio | Andres Carrasco",
+  "aboutTitle": "About me",
+  "aboutp1": "I'm a Developer. I graduated from Rafael Belloso Chacin's University in 2018 for Informatics Engineer Degree.",
+  "aboutp2": "I consider myself as a 'forever student', fueled by passion for development, continued my career growing as a self-taught, mainly focused on the front end development, growing and improving, staying in tune with the latest technologies.",
+  "resumeButton": "Download resume",
+  "resumeLink": "https://github.com/sadpvndv/resume/raw/main/Andres-ESP.pdf",
+  "formTitle": "Have a question or want to work together?",
+  "formName": "name",
+  "formEmail": "email",
+  "formPhone": "phone",
+  "formMessage": "message",
+  "formSubmit": "Submit"
+}
